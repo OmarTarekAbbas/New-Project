@@ -1,0 +1,122 @@
+<% include ../../partials/header %>
+
+<br>
+
+<div class="container">
+    <form action="http://localhost:7500/event/edit/<%= event[0].id %>" method="post" class="form-horizontal">
+        <div class="row clearfix">
+            <div class="col-sm-6 col-md-6">
+                <p><b>Name</b></p>
+                <div class="form-group">
+                    <input type="text" name="name" id="name" value="<%= event[0].name %>" class="form-control"  placeholder="Name" required>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-6">
+                <p><b>Number</b></p>
+                <div class="form-group">
+                    <input type="number" name="number" id="number" value="<%= event[0].number %>" class="form-control" min="0" placeholder="Number" required>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-sm-6 col-md-6">
+                <p><b>City</b></p>
+                <div class="form-group">
+                    <input type="text" name="city" id="city" value="<%= event[0].city %>" class="form-control" placeholder="City" required>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-6">
+                <p><b>Fees</b></p>
+                <div class="form-group">
+                    <input type="number" name="fess" id="fess" value="<%= event[0].fess %>" class="form-control" min="0" placeholder="Fees" required>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-sm-6 col-md-6">
+                <p><b>Nationality</b></p>
+                <div class="form-group">
+                    <input type="text" name="nationality" id="nationality" value="<%= event[0].nationality %>" class="form-control" placeholder="Nationality" required>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-6">
+                <p><b>Language</b></p>
+                <div class="form-group">
+                    <input type="text" name="language" id="language" value="<%= event[0].language %>" class="form-control" placeholder="Language" required>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-sm-6 col-md-6">
+                <p><b>National ID</b></p>
+                <div class="form-group">
+                    <input type="number" name="national" id="national" value="<%= event[0].national %>" class="form-control" min="0" placeholder="National ID" required>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-6">
+                <p><b>Passport Number</b></p>
+                <div class="form-group">
+                    <input type="number" name="passport_number" id="passport_number" value="<%= event[0].passport_number %>" class="form-control" min="0" placeholder="Passport Number" required>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-sm-6 col-md-6">
+                <p><b>Licence Number</b></p>
+                <div class="form-group">
+                    <input type="text" name="licence_number" id="licence_number" value="<%= event[0].licence_number %>" class="form-control" placeholder="Licence Number" required>
+                </div>
+
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <p><b>Start Date</b></p>
+                <div class="form-group">
+                    <input type="date" name="start_date" id="start_date" value="<%= event[0].start_date %>" class="form-control" required>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row clearfix">
+
+            <div class="col-sm-12 col-md-12">
+                <p><b>End Date</b></p>
+                <div class="form-group">
+                    <input type="date" name="end_date" id="end_date" value="<%= event[0].end_date %>" class="form-control" required>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="submit" class="col-6 col-form-label" > </label>
+            <div class="col-12" style="text-align: center">
+                <input type="submit" id="submit" value="Save Event" class="btn btn-primary" class="form-control">
+            </div>
+        </div>
+    </form>
+</div>
+
+<% include ../../partials/footer %>
